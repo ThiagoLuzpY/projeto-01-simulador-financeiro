@@ -1,6 +1,7 @@
-# 💰 Simulador de Cenários Financeiros – v1.1
+# 💰 Simulador de Cenários Financeiros – v1.2
 
-Este projeto foi desenvolvido como parte de uma série prática de aplicações úteis para o ambiente corporativo, com foco em análise de dados e visualização interativa. Esta versão avançada permite simular diferentes cenários financeiros com **impostos discriminados por tipo**, possibilitando uma análise mais fiel à realidade empresarial.
+Este projeto foi desenvolvido como parte de uma série prática de aplicações úteis para o ambiente corporativo, com foco em análise de dados, visualização interativa e simulação de cenários financeiros.  
+A versão 1.2 traz aprimoramentos visuais e funcionais que permitem uma análise ainda mais intuitiva e profissional.
 
 ---
 
@@ -10,8 +11,11 @@ Permitir a análise de rentabilidade e impacto de variáveis financeiras sobre o
 
 - Receita Bruta  
 - Custo Total  
-- Impostos individualizados (ICMS, PIS, COFINS, etc)  
-- Crescimento ou retração prevista (%)
+- Impostos individualizados (ICMS, PIS, COFINS, ICMS-ST, IPI, Fundo de Pobreza RJ)  
+- Crescimento ou retração prevista (%)  
+- Projeção de lucro nos próximos 12 meses  
+- Estimativa de ponto de equilíbrio com regressão linear  
+- Alertas automáticos sobre saúde financeira do cenário
 
 ---
 
@@ -19,9 +23,9 @@ Permitir a análise de rentabilidade e impacto de variáveis financeiras sobre o
 
 - [Python 3.11](https://www.python.org/)
 - [Streamlit](https://streamlit.io/) – Interface web simples e rápida
-- [Pandas](https://pandas.pydata.org/) – Manipulação de dados
 - [Plotly](https://plotly.com/python/) – Visualizações interativas
-- [Scikit-learn](https://scikit-learn.org/) – (Previsto para expansões futuras)
+- [NumPy](https://numpy.org/) – Cálculos matemáticos
+- [Scikit-learn](https://scikit-learn.org/) – Regressão linear
 
 ---
 
@@ -56,7 +60,7 @@ streamlit run app.py
 
 
 📌 Versão Atual
-v1.1 – Adição de impostos discriminados (ICMS, ICMS-ST, PIS, COFINS, IPI, Fundo de Pobreza RJ) com cálculo automático e resultados projetados.
+v1.2 – Interface profissionalizada, projeção mensal com gráfico, cálculo do ponto de equilíbrio com regressão linear, e alertas inteligentes.
 
 Desenvolvido por Thiago Luz • Todos os direitos reservados © 2025
 
@@ -69,5 +73,16 @@ Execute os comandos Git para versionar e subir para o GitHub:
 
 ```bash
 git add .
-git commit -m "Versão 1.1 – Simulador com impostos discriminados"
+git commit -m "Versão 1.2 – Interface melhorada + regressão + alertas + layout"
 git push
+
+
+---
+
+### ✅ `requirements.txt` atualizado
+
+```txt
+streamlit==1.33.0
+plotly==5.21.0
+numpy==1.26.4
+scikit-learn==1.4.2
